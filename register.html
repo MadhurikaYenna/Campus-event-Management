@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+          body{
+            margin-top: 200px;
+            background-image: url("https://dg.imgix.net/the-spiritual-discipline-of-sky-iptokbrp-en/landscape/the-spiritual-discipline-of-sky-iptokbrp-1dc8f54301afae386ac00041e83c1d41.jpg?ts=1696349552&ixlib=rails-4.3.1&fit=crop&w=2000&h=1050");
+            background-size: cover;
+            background-repeat: no-repeat;
+       
+          }
+        .card{
+
+            border: 2px solid black;   /* corrected clean border */
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;              /* keeps border perfect */
+            border-radius: 5px;        /* optional slight round */
+        }
+        input[type="submit"]{
+            width: 50%;
+            margin-top: 10px;
+            cursor: pointer;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="font-size: larger;text-align: center;">Please login after Registration</h1>
+
+    <div class="card">
+        <h1 style="text-align: center
+        ;">REGISTER</h1>
+        <form onsubmit="return register()">
+            Name<br> <input type="text" id="uname"><br><br>
+            Email<br> <input type="email" id="email"><br><br>
+            Phone Number<br> <input type="text" id="phno"><br><br>
+            Age<br> <input type="text" id="age"><br><br>
+            Password<br> <input type="password" id="password"><br><br>
+
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+<script>
+        function register(){
+            let n=document.getElementById("uname").value;
+            let e=document.getElementById('email').value;
+            let p=document.getElementById('phno').value;
+            let a=document.getElementById('age').value;
+            let pass=document.getElementById('password').value;
+
+            if(n==''|| e==''|| p==''||a==''||pass==''){
+                alert("Registration failed!!");
+                return false;
+            }
+
+            if(pass.length<6){
+                alert("Password must have 6 characters");
+                return false;
+            }
+
+            if(p.length!=10){
+                alert("Phone Number should consist of 10 digits");
+                return false;
+            }
+            alert("registerd successfully")
+            return true;
+        }
+</script>
+
+</body>
+</html>
